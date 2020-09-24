@@ -1,16 +1,12 @@
 <template>
-  <div class="header">
+  <div class="container">
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  computed:{
-    getMovies(){
-      return this.$store.state.movies
-    }
-  },
+
   mounted(){
     this.$store.dispatch('getTrending');
   }
@@ -25,10 +21,18 @@ body{
   margin: 0;
   padding: 0;
   background: linear-gradient(90deg, #000000, #422121);
+  font-family: 'Roboto', 'Poppins',  sans-serif;
+  font-size: 1rem;
 }
 #app {
   width: 100vw;
   height: 100vh;
-  color: #FF6363 
+  color:#ffbdbd
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 </style>
